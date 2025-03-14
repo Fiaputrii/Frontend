@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Tambah Mahasiswa</h1>
+    <h1>Tambah Notifikasi</h1>
 
-    <form action="{{ route('mahasiswa.store') }}" method="POST">
+    <form action="{{ route('notifikasi.store') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="nim" class="form-label">NIM</label>

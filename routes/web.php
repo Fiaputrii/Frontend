@@ -3,6 +3,7 @@
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\DosenWaliController;
 use App\Http\Controllers\PertemuanPerwalianController;
+use App\Http\Controllers\NotifikasiController;
 
 Route::get('/', function () {
     return view('login');
@@ -22,3 +23,6 @@ Route::resource('dosenwali', DosenWaliController::class);
 
 Route::get('/pertemuanperwalian', [PertemuanPerwalianController::class, 'index'])->name('pertemuanperwalian.index');  // Tampilkan daftar pertemuan perwalian
 Route::resource('pertemuanperwalian', PertemuanPerwalianController::class);
+
+Route::get('/notifikasi', [NotifikasiController::class, 'index'])->name('notifikasi.index');  // Tampilkan daftar pertemuan perwalian
+Route::resource('notifikasi', NotifikasiController::class);

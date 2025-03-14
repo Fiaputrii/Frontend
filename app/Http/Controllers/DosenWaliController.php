@@ -26,10 +26,9 @@ class DosenWaliController extends Controller
         // Validasi input
         $request->validate([
             
-            'nidn' => 'required|unique:dosen_wali',
+            'nidn' => 'required',
             'nama' => 'required',
-            'email' => 'required|email|unique:dosen_wali',
-            'password' => 'required',
+            'email' => 'required',
         ]);
 
         // Menyimpan data dosen wali ke dalam database
@@ -51,10 +50,9 @@ class DosenWaliController extends Controller
         // Validasi input
         $request->validate([
            
-            'nidn' => 'required|unique:dosen_wali,nidn,' . $dosenwali->nidn,
+            'nidn' => 'required',
             'nama' => 'required',
-            'email' => 'required|email|unique:dosen_wali,email,' . $dosenwali->nidn,
-            'password' => 'required',
+            'email' => 'required',
         ]);
 
         // Memperbarui data dosen wali

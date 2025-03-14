@@ -12,7 +12,6 @@
                 <th>NIDN</th>
                 <th>Nama</th>
                 <th>Email</th>
-                <th>Password</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -22,7 +21,6 @@
                     <td>{{ $item->nidn }}</td>
                     <td>{{ $item->nama }}</td>
                     <td>{{ $item->email }}</td>
-                    <td>{{ $item->password }}</td>
                     <td>
                         <!-- Tombol untuk edit dan hapus -->
                         <a href="{{ route('dosenwali.edit', $item->nidn) }}" class="btn btn-warning">Edit</a>

@@ -151,6 +151,11 @@
                         <i class="bi bi-calendar-check-fill"></i> Pertemuan Perwalian
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('notifikasi.index') }}" class="nav-link">
+                        <i class="bi bi-calendar-check-fill"></i> Notifikasi
+                    </a>
+                </li>
             </ul>
         </div>
 

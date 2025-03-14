@@ -15,5 +15,5 @@ class DosenWali extends Model
     protected $keyType = 'string'; // Kalau NPM dalam bentuk string
     public $timestamps = false; // Matikan timestamps
 
-    protected $fillable = ['nidn', 'nama', 'email', 'password'];
+    protected $fillable = ['nidn', 'nama', 'email'];
 }

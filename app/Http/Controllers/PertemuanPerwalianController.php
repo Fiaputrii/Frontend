@@ -22,25 +22,37 @@ class PertemuanPerwalianController extends Controller
 
     // Menyimpan pertemuan perwalian baru ke database
     public function store(Request $request)
-    {
-        // Validasi input
-        $request->validate([
-            'id_pertemuan' => 'required',
-            'tanggal' => 'required|date',
-            'topik' => 'required|string|max:255',
-            'catatan' => 'nullable|string',
-            'saran_akademik' => 'nullable|string',
-            'nim' => 'required|exists:mahasiswa,nim',  // Validasi NIM mahasiswa
-            'nidn' => 'required|exists:dosen_wali,nidn',  // Validasi NIDN dosen wali
-            'bulan_tahun' => 'nullable|string',
-        ]);
+{
+    // Validasi input
+    $request->validate([
+        'id_pertemuan' => 'required',
+        'tanggal' => 'required',
+        'topik' => 'required',
+        'catatan' => 'required',
+        'saran_akademik' => 'required',
+        'nim' => 'required|exists:mahasiswa,nim',  // Validasi NIM mahasiswa
+        'nidn' => 'required|exists:dosen_wali,nidn',  // Validasi NIDN dosen wali
+    ]);
 
-        // Menyimpan data pertemuan perwalian ke dalam database
-        PertemuanPerwalian::create($request->all());
+    // Tambahkan kolom bulan_tahun berdasarkan tanggal
+    $tanggal = \Carbon\Carbon::parse($request->tanggal);
+    $bulan_tahun = $tanggal->format('m/Y');  // Format bulan/tahun
 
-        // Redirect ke halaman index setelah berhasil
-        return redirect()->route('pertemuanperwalian.index');
-    }
+    // Menyimpan data pertemuan perwalian ke dalam database
+    PertemuanPerwalian::create([
+        'id_pertemuan' => $request->id_pertemuan,
+        'tanggal' => $request->tanggal,
+        'topik' => $request->topik,
+        'catatan' => $request->catatan,
+        'saran_akademik' => $request->saran_akademik,
+        'nim' => $request->nim,
+        'nidn' => $request->nidn,
+        //'bulan_tahun' => $bulan_tahun,  // Set bulan_tahun secara manual
+    ]);
+
+    // Redirect ke halaman index setelah berhasil
+    return redirect()->route('pertemuanperwalian.index');
+}
 
     // Menampilkan form untuk mengedit data pertemuan perwalian
     public function edit(PertemuanPerwalian $pertemuanperwalian)
@@ -63,7 +75,7 @@ class PertemuanPerwalianController extends Controller
             'bulan_tahun' => 'nullable|string',
         ]);
 
-        // Memperbarui data pertemuan perwalian
+        
         $pertemuanperwalian->update($request->all());
 
         // Redirect ke halaman index setelah berhasil
