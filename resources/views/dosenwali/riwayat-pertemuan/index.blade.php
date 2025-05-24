@@ -1,7 +1,7 @@
 @extends('layouts.dosen')
 
 @section('content')
-<h2>Daftar Mahasiswa</h2>
+<h2>Daftar Pertemuan</h2>
 
 {{-- Tambahkan ID agar bisa dipanggil oleh DataTables --}}
 <table id="mahasiswaTable" class="display">
