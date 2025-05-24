@@ -1,39 +1,31 @@
 @extends('layouts.app')
-
 @section('content')
-    <h1>Daftar Mahasiswa</h1>
+<h2>Daftar Mahasiswa</h2>
 
-    <a href="{{ route('mahasiswa.create') }}" class="btn btn-primary mb-3">Tambah Mahasiswa</a>
-
-    <!-- Tabel untuk menampilkan data dosen wali -->
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>NIM</th>
-            <th>Nama</th>
-            <th>Email</th>
-            <th>Alamat</th>
-            <th>NIDN Dosen Wali</th>
-            <th>Aksi</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($mahasiswa as $mhs)
-            <tr>
-                <td>{{ $mhs['nim'] }}</td> <!-- Akses data sebagai array -->
-                <td>{{ $mhs['nama_mahasiswa'] }}</td>
-                <td>{{ $mhs['email'] }}</td>
-                <td>{{ $mhs['alamat'] }}</td>
-                <td>{{ $mhs['nim'] }}</td>
-                <td>
-                    <a href="{{ route('mahasiswa.edit', $mhs['nim']) }}" class="btn btn-warning">Edit</a>
-                    <form action="{{ route('mahasiswa.destroy', $mhs['nim']) }}" method="POST" style="display:inline;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Hapus</button>
-                    </form>
-                </td>
-            </tr>
-        @endforeach
-    </tbody>
+<table>
+  <tr>
+    <th>NIM</th><th>Nama</th><th>Email</th><th>Detail</th>
+  </tr>
+  @foreach($mahasiswa as $m)
+    <tr>
+      <td>{{ $m['nim'] }}</td>
+      <td>{{ $m['nama_mahasiswa'] }}</td>
+      <td>{{ $m['email'] }}</td>
+      <td>
+        <a href="{{ route('mahasiswa.show', $m['nim']) }}">Lihat</a>
+      </td>
+    </tr>
+  @endforeach
 </table>
+
+{{-- Pagination --}}
+<div>
+  @if($page > 1)
+    <a href="{{ route('mahasiswa.index', ['page'=>$page-1]) }}">« Prev</a>
+  @endif
+  Halaman {{ $page }} dari {{ $last }}
+  @if($page < $last)
+    <a href="{{ route('mahasiswa.index', ['page'=>$page+1]) }}">Next »</a>
+  @endif
+</div>
+@endsection

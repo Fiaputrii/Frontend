@@ -13,7 +13,7 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -73,22 +73,38 @@
             }
         }
     </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
+    
 
     <div class="sidebar">
         <div class="sidebar-title">Sistem Perwalian2</div>
         <nav class="nav flex-column">
-            <a href="{{ route('mahasiswa.index') }}" class="nav-link"><i class="bi bi-person-fill"></i> Mahasiswa</a>
-            <a href="{{ route('dosenwali.index') }}" class="nav-link"><i class="bi bi-person-check-fill"></i> Dosen Wali</a>
-         </nav>
+            <a href="/dosen/mahasiswa" class="nav-link"><i class="bi bi-person-fill"></i> Mahasiswa</a>
+            <a href="{{ route('dosen.perwalian.index') }}" class="nav-link"><i class="bi bi-person-check-fill"></i> Jadwal Perwalian</a>
+			<a href="{{ route('logout') }}" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        </nav>
     </div>
 
     <div class="main-content">
+		@if(session('success'))
+			<div class="alert alert-success">{{ session('success') }}</div>
+        @endif
+        
+        @if(session('error'))
+			<div class="alert alert-danger">{{ session('error') }}</div>
+        @endif
+        
         <div class="content-section">
             @yield('content')
         </div>
     </div>
 
+    
+    
 </body>
 </html>

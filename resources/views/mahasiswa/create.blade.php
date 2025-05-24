@@ -1,36 +1,16 @@
 @extends('layouts.app')
-
 @section('content')
-    <h1>Tambah Notifikasi</h1>
-
-    <form action="{{ route('notifikasi.store') }}" method="POST">
-        @csrf
-        <div class="mb-3">
-            <label for="nim" class="form-label">NIM</label>
-            <input type="text" class="form-control" id="nim" name="nim" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="nama" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="alamat" class="form-label">Alamat</label>
-            <input type="text" class="form-control" id="alamat" name="alamat" required>
-        </div>
-
-        <div class="mb-3">
-            <label for="nidn" class="form-label">NIDN Dosen Wali</label>
-            <input type="text" class="form-control" id="nidn" name="nidn" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Simpan</button>
-        <a href="{{ route('mahasiswa.index') }}" class="btn btn-secondary">Kembali</a>
-    </form>
+<h2>Tambah Mahasiswa</h2>
+@if($errors->any())
+  <div><ul>@foreach($errors->all() as $err)<li>{{ $err }}</li>@endforeach</ul></div>
+@endif
+<form action="{{ route('mahasiswa.store') }}" method="POST">
+  @csrf
+  <input name="nim" placeholder="NIM" value="{{ old('nim') }}" required>
+  <input name="nama" placeholder="Nama" value="{{ old('nama') }}" required>
+  <input name="email" placeholder="Email" value="{{ old('email') }}" required>
+  <textarea name="alamat" placeholder="Alamat">{{ old('alamat') }}</textarea>
+  <input name="nidn" placeholder="NIDN Dosen Wali" value="{{ old('nidn') }}" required>
+  <button type="submit">Simpan</button>
+</form>
 @endsection

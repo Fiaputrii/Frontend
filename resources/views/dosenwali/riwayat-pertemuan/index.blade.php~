@@ -1,0 +1,43 @@
+@extends('layouts.dosen')
+
+@section('content')
+<h2>Daftar Mahasiswa</h2>
+
+{{-- Tambahkan ID agar bisa dipanggil oleh DataTables --}}
+<table id="mahasiswaTable" class="display">
+  <thead>
+    <tr>
+      <th>Nama Mahasiswa</th>
+      <th>Nama Dosen</th>
+      <th>Tanggal</th>
+      <th>Topik</th>
+      <th>Catatan</th>
+      <th>Saran Akademik</th>
+      <th>Bulan Tahun</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($data as $row)
+      <tr>
+        <td>{{ $row['nama_mahasiswa'] }}</td>
+        <td>{{ $row['nama_dosen'] }}</td>
+        <td>{{ $row['tanggal'] }}</td>
+        <td>{{ $row['topik'] }}</td>
+        <td>{{ $row['catatan'] }}</td>
+        <td>{{ $row['saran_akademik'] }}</td>
+        <td>{{ $row['bulan_tahun'] }}</td>
+      </tr>
+    @endforeach
+  </tbody>
+</table>
+<script>
+    $(document).ready(function() {
+      $('#mahasiswaTable').DataTable({
+        responsive: true,
+      });
+    });
+  </script>
+@endsection
+
+
+
