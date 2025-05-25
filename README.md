@@ -5,3 +5,11 @@
 
 file resources -> views -> auth -> login.blade.php
 ![pbf1](https://github.com/user-attachments/assets/7ae2c7d5-4d97-4b1b-b3ba-8a53c665e29c)
+
+## Dashboard Dosen Wali ##
+![image](https://github.com/user-attachments/assets/3fce36fd-5304-429d-b06a-129b5e871155)
+
+### Side Bar Dosen Wali  ###
+file resources -> views -> layouts -> dosen.blade.php
+![pbf2](https://github.com/user-attachments/assets/1afc6b22-2365-4ad2-90b8-f5b73c0587e3)
+
