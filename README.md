@@ -20,6 +20,11 @@ Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Cr
 ## ⚙️ Teknologi yang Digunakan
 
 - [Laravel](https://laravel.com/) -framework PHP yang digunakan untuk membangun aplikasi web secara lebih cepat, rapi, dan terstruktur.
+  Mengatur Struktur Kode (MVC)
+    Laravel menggunakan arsitektur MVC (Model-View-Controller):
+   - Model: Mengelola data dan database
+   - View: Tampilan antarmuka pengguna (HTML, Blade)
+   - Controller: Mengatur alur logika aplikasi
 - [Bootstrap](https://getbootstrap.com/) - Untuk tampilan
 - RESTful API - Untuk sumber data mahasiswa eksternal
 - MySQL - Sebagai database lokal
