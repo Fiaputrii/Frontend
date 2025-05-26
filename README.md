@@ -19,7 +19,6 @@ Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Cr
 ## ⚙️ Teknologi yang Digunakan
 
 - [Laravel](https://laravel.com/) 
-- [Laravel Breeze](https://laravel.com/docs/starter-kits#breeze) - Untuk autentikasi
 - [Bootstrap](https://getbootstrap.com/) - Untuk tampilan
 - RESTful API - Untuk sumber data mahasiswa eksternal
 - MySQL - Sebagai database lokal
