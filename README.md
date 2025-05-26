@@ -3,6 +3,10 @@
 Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Create, Read, Update, Delete)** untuk entitas **Mahasiswa** dan **Dosen Wali**. Data mahasiswa diambil dari **API eksternal**, dan pengguna aplikasi dibatasi hanya untuk dua peran: **Mahasiswa** dan **Dosen Wali**.
 
 ---
+## Link Backend ##
+🔗 **Repositori Backend:** [fasshashaa/Perwalian-Backend](https://github.com/fasshashaa/Perwalian-Backend)
+
+---
 
 ## 🚀 Fitur Utama
 
@@ -19,24 +23,14 @@ Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Cr
 
 ## ⚙️ Teknologi yang Digunakan
 
-- [Laravel](https://laravel.com/) -framework PHP yang digunakan untuk membangun aplikasi web secara lebih cepat, rapi, dan terstruktur.
-  Mengatur Struktur Kode (MVC)
-    Laravel menggunakan arsitektur MVC (Model-View-Controller):
-   - Model: Mengelola data dan database
-   - View: Tampilan antarmuka pengguna (HTML, Blade)
-   - Controller: Mengatur alur logika aplikasi
+- [Laravel](https://laravel.com/) - Framework PHP yang digunakan untuk membangun aplikasi web secara lebih cepat, rapi, dan terstruktur.
+  - Mengatur Struktur Kode (MVC):
+    - Model: Mengelola data dan database  
+    - View: Tampilan antarmuka pengguna (HTML, Blade)  
+    - Controller: Mengatur alur logika aplikasi  
 - [Bootstrap](https://getbootstrap.com/) - Untuk tampilan
 - RESTful API - Untuk sumber data mahasiswa eksternal
 - MySQL - Sebagai database lokal
-
----
-
-## 🏁 Instalasi
-
-1. **Clone repositori**
-   ```bash
-   git clone https://github.com/username/nama-proyek.git
-   cd nama-proyek
 
 ---
 
