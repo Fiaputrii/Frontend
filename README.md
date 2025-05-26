@@ -1,4 +1,38 @@
-# FRONTEND
+# 📚 Sistem Perwalian
+
+Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Create, Read, Update, Delete)** untuk entitas **Mahasiswa** dan **Dosen Wali**. Data mahasiswa diambil dari **API eksternal**, dan pengguna aplikasi dibatasi hanya untuk dua peran: **Mahasiswa** dan **Dosen Wali**.
+
+---
+
+## 🚀 Fitur Utama
+
+- 🔐 Autentikasi pengguna berdasarkan role:
+  - Mahasiswa
+  - Dosen Wali
+- 📋 CRUD Mahasiswa (dengan data dari API eksternal)
+- 👨‍🏫 CRUD Dosen Wali
+- 📄 Tampilan responsif dan user-friendly
+- 🔄 Sinkronisasi data dari API eksternal
+
+---
+
+## ⚙️ Teknologi yang Digunakan
+
+- [Laravel](https://laravel.com/) 
+- [Laravel Breeze](https://laravel.com/docs/starter-kits#breeze) - Untuk autentikasi
+- [Bootstrap](https://getbootstrap.com/) - Untuk tampilan
+- RESTful API - Untuk sumber data mahasiswa eksternal
+- MySQL - Sebagai database lokal
+
+---
+
+## 🏁 Instalasi
+
+1. **Clone repositori**
+   ```bash
+   git clone https://github.com/username/nama-proyek.git
+   cd nama-proyek
+
 
 ## Halaman Login ##
 ![image](https://github.com/user-attachments/assets/d7e1ea17-6f41-41e7-9cff-b34bc7d81f0c)
