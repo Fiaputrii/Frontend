@@ -9,8 +9,9 @@ Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Cr
 - 🔐 Autentikasi pengguna berdasarkan role:
   - Mahasiswa
   - Dosen Wali
-- 📋 CRUD Mahasiswa (dengan data dari API eksternal)
-- 👨‍🏫 CRUD Dosen Wali
+- 📋 CRUD Mahasiswa (dengan data dari API eksternal), dapat menampilkan data mahasiswa
+- 💬 Dosen dapat memberikan **saran akademik** kepada mahasiswa
+- 📅 Mahasiswa dapat melakukan **penjadwalan perwalian** dengan dosen wali
 - 📄 Tampilan responsif dan user-friendly
 - 🔄 Sinkronisasi data dari API eksternal
 
