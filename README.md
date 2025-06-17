@@ -46,13 +46,33 @@ Silakan unduh dan import file SQL melalui link:
 
 ### 1. Clone Repo Backend
 ```bash
-git clone https://github.com/Arfilal/backend_sinilai.git
+git clone https://github.com/fasshashaa/Perwalian-Backend
 ```
 
-cd backend_sinilai
-composer install
-cp .env.example .env
-php spark serve
+### 2. Install Dependency CodeIgniter
+```composer install
+```
+
+### 3. Menjalankan CodeIgniter
+```php spark serve
+```
+### 4. Cek Endpoint
+
+
+## 🖥️ Setup Frontend (Laravel)
+
+### 1. Melalui terminal/cmd
+```composer create-project laravel/laravel (nama-projek)
+```
+
+### 2. Melalui Laragon
+- Buka Laragon
+- Klik kanan Quick app
+- Laravel
+
+### 3. Install Dependency Laravel
+```Install Dependency Laravel
+```
 
 ## Halaman Login ##
 ![image](https://github.com/user-attachments/assets/aa6cbc88-7f3d-41fe-9a95-cb6dafc95cc1)
