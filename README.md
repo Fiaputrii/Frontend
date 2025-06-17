@@ -83,14 +83,14 @@ Install Dependency Laravel
 php artisan serve
 ```
 
-## Tahapan Pembuatan Frontend
+## 📅 Tahapan Pembuatan Frontend
 
 ### Controller
 ```bash
 php artisan make:controller nama_fileController / php artisan make:model nama-file -mcr
 ```
 
-Contoh MahasiswaController
+## Contoh MahasiswaController
 ```bash
 <?php
 
@@ -160,7 +160,7 @@ class MahasiswaController extends Controller
 php artisan make:view nama_file
 ```
 
-Contoh index.blade.php
+## Contoh index.blade.php
 ```bash
 @extends('layouts.app')
 @section('content')
