@@ -34,6 +34,10 @@ Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Cr
 
 ---
 
+## Database
+
+    Import database
+
 ## Halaman Login ##
 ![image](https://github.com/user-attachments/assets/aa6cbc88-7f3d-41fe-9a95-cb6dafc95cc1)
 
