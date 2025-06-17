@@ -44,8 +44,11 @@ Silakan unduh dan import file SQL melalui link:
 
 ## 🖥️ Setup Backend (CodeIgniter)
 
+### 1. Clone Repo Backend
 ```bash
 git clone https://github.com/Arfilal/backend_sinilai.git
+```
+
 cd backend_sinilai
 composer install
 cp .env.example .env
