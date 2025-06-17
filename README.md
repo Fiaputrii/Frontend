@@ -50,11 +50,13 @@ git clone https://github.com/fasshashaa/Perwalian-Backend
 ```
 
 ### 2. Install Dependency CodeIgniter
-```composer install
+```bash
+composer install
 ```
 
 ### 3. Menjalankan CodeIgniter
-```php spark serve
+```bash
+php spark serve
 ```
 ### 4. Cek Endpoint
 
@@ -62,7 +64,8 @@ git clone https://github.com/fasshashaa/Perwalian-Backend
 ## 🖥️ Setup Frontend (Laravel)
 
 ### 1. Melalui terminal/cmd
-```composer create-project laravel/laravel (nama-projek)
+```bash
+composer create-project laravel/laravel (nama-projek)
 ```
 
 ### 2. Melalui Laragon
