@@ -34,9 +34,22 @@ Proyek ini merupakan aplikasi berbasis Laravel yang menyediakan fitur **CRUD (Cr
 
 ---
 
-## Database
+## 🗃️ Database
 
-    Import database
+Silakan unduh dan import file SQL melalui link:
+
+👉 [Download SQL di repositori Frontend]()
+
+---
+
+## 🖥️ Setup Backend (CodeIgniter)
+
+```bash
+git clone https://github.com/Arfilal/backend_sinilai.git
+cd backend_sinilai
+composer install
+cp .env.example .env
+php spark serve
 
 ## Halaman Login ##
 ![image](https://github.com/user-attachments/assets/aa6cbc88-7f3d-41fe-9a95-cb6dafc95cc1)
